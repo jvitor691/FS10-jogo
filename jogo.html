@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+    <div id="tela">
+        <div class="pontos"></div>
+        <div class="boneco"></div>
+        <div class="parede"></div>
+    </div>
+    <script>
+        window.addEventListener("click", function(){
+            let boneco = document.querySelector(".boneco");
+            boneco.classList.add("pulando")
+            setTimeout(function(){
+                boneco.classList.remove("pulando");
+            }, 1000)
+        })
+    </script>
+</body>
+</html>

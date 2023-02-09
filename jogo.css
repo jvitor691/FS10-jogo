@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tela{
+    width: 500px;
+    height: 300px;
+    border: 5px solid black;
+    position: relative;
+    overflow: hidden;
+}
+.boneco{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.boneco.pulando{
+    animation: bonecoPulando ease-in-out 1 1s;
+}
+.parede{
+    width: 30px;
+    height: 60px;
+    background-color: blue;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* animation: paredeAndando linear infinite 1s; */
+}
+@keyframes paredeAndando {
+    from{}
+    to{right: 100%;}
+}
+@keyframes bonecoPulando {
+    0%{}
+    50%{
+        bottom: 80px;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
