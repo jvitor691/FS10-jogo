@@ -28,6 +28,8 @@
                 clearInterval(paredeAndando);
                 parede.style.left = parede.offsetLeft+"px";
                 parede.classList.remove("andando");
+                comecar.style.display = "block";
+                comecar.innerHTML = "Game Over";
             }
         }, 1);
 
