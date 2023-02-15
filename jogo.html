@@ -24,17 +24,18 @@
         let count = 0;
         
         let paredeAndando = setInterval(function(){
-            if((parede.offsetLeft <= 50 && parede.offsetLeft < 20) && boneco.offsetTop > 190){
+            if((parede.offsetLeft <= 55 && parede.offsetLeft < 20) && boneco.offsetTop > 190){
                 clearInterval(paredeAndando);
                 parede.style.left = parede.offsetLeft+"px";
                 parede.classList.remove("andando");
                 comecar.style.display = "block";
                 comecar.innerHTML = "Game Over";
+                location.reload();
             }
         }, 1);
 
         comecar.addEventListener("click", function(){
-            let count = 3;
+            let count = 4;
             let regressivo = setInterval(function(){
                 count = count - 1;
                 comecar.innerHTML = count;
